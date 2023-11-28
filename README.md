@@ -3,8 +3,8 @@
 ```sh
 npm run dev
 
-node ./scripts/add-todos.js
-node ./scripts/delete-todos.js
+npx tsx ./scripts/add-todos.ts
+npx tsx ./scripts/delete-todos.ts
 
 npx cfw-storage-bindings-studio
 ```
