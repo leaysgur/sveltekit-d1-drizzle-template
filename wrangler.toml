@@ -1,10 +1,6 @@
 name = "dev-worker"
 compatibility_date = "2023-11-15"
 
-[[kv_namespaces]]
-binding = "KVS"
-id = "dummy"
-
 [[d1_databases]]
 binding = "DB"
 database_name = "myapp"
