@@ -3,7 +3,7 @@ import { D1Database$ } from "cfw-bindings-wrangler-bridge";
 import { drizzle } from "drizzle-orm/d1";
 import { todos } from "../src/lib/server/schema";
 
-console.log("ADD TODOS SCRIPT 💣");
+console.log("ADD TODOS SCRIPT 🆕");
 console.log("----------------------");
 
 console.log("DevWorker is starting...");
@@ -28,9 +28,8 @@ const values = [
   "Cloudflare D1",
   "Drizzle",
   "Template",
-].map((name) => ({
-  name,
-}));
+].map((name) => ({ name }));
+
 const result = await db.insert(todos).values(values);
 console.log(result);
 
