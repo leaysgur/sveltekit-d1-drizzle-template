@@ -1,6 +1,7 @@
 # sveltekit-drizzle-d1-template
 
 ```sh
+wrangler dev ./node_modules/cfw-bindings-wrangler-bridge/worker/index.js
 npm run dev
 
 npx tsx ./scripts/add-todos.ts
