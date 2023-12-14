@@ -16,7 +16,7 @@ const worker = await unstable_dev(
 );
 
 const bridgeWorkerOrigin = `http://${worker.address}:${worker.port}`;
-console.log("DevWorker is started at", bridgeWorkerOrigin);
+console.log("✅", "DevWorker is started at", bridgeWorkerOrigin);
 
 const DB = new D1Database$("DB", { bridgeWorkerOrigin }) as D1Database;
 const db = drizzle(DB);
@@ -28,10 +28,10 @@ const values = [
   "Cloudflare D1",
   "Drizzle",
   "Template",
-].map((name) => ({ name }));
+].map((name, points) => ({ name, points }));
 
 const result = await db.insert(todos).values(values);
 console.log(result);
 
 await worker.stop();
-console.log("Done! ⚡");
+console.log("⚡", "Done!");
