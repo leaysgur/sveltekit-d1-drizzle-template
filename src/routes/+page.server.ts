@@ -4,10 +4,11 @@ import type { Actions, PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async ({ platform }) => {
   const db = drizzle(platform?.env.DB!);
-  const res = await db.select({ name: todos.name }).from(todos).all();
+
+  const todoRows = await db.select({ name: todos.name }).from(todos).all();
 
   return {
-    todos: res,
+    todos: todoRows,
   };
 };
 
