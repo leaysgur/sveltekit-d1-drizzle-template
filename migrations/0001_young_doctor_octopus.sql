@@ -1,0 +1,1 @@
+ALTER TABLE todos ADD `points` integer DEFAULT 0 NOT NULL;

@@ -1,6 +1,9 @@
 # sveltekit-drizzle-d1-template
 
 ```sh
+npm run migrate
+wrangler d1 migrations apply myapp --local
+
 wrangler dev ./node_modules/cfw-bindings-wrangler-bridge/worker/index.js
 npm run dev
 

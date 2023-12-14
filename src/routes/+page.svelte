@@ -8,12 +8,13 @@
 
 <form method="POST" use:enhance>
   <input type="text" name="name" />
+  <input type="number" min="0" name="points" />
   <button>Add</button>
 </form>
 
 <ul>
   {#each data.todos as todo}
-    <li>{todo.name}</li>
+    <li>[{todo.points}] {todo.name}</li>
   {:else}
     <li>Empty...</li>
   {/each}
